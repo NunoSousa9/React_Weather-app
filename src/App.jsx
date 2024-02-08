@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { getTotalData } from './API/GetAPI';
+import { fetchCityData } from './API/GetAPI';
 import WorldMap from './Maps/WorldMap';
 import CityCard from './CityCard';
 import 'leaflet/dist/leaflet.css';
@@ -13,8 +13,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
         try {
-          const data = await getTotalData();
-          setCitiesData([data]);
+          const data = await fetchCityData();
+          setCitiesData(data);
         } catch (error) {
           console.error('Error fetching data:', error);
         }
