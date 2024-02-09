@@ -1,62 +1,62 @@
 [
  {
   "name": "Abidjan",
-  "lon": -4.00167,
-  "lat": 5.35444,
+  "lon": -4.0197,
+  "lat": 5.3094,
   "country": "Ivory Coast"
  },
  {
   "name": "Abu Dhabi",
-  "lon": 54.39696,
-  "lat": 24.45118,
+  "lon": 54.3667,
+  "lat": 24.4667,
   "country": "United Arab Emirates"
  },
  {
   "name": "Abuja",
-  "lon": 7.49508,
-  "lat": 9.05785,
+  "lon": 7.4898,
+  "lat": 9.0574,
   "country": "Nigeria"
  },
  {
   "name": "Accra",
   "lon": -0.1969,
-  "lat": 5.55602,
+  "lat": 5.556,
   "country": "Ghana"
  },
  {
   "name": "Addis Ababa",
-  "lon": 38.74689,
-  "lat": 9.02497,
+  "lon": 38.7469,
+  "lat": 9.025,
   "country": "Ethiopia"
  },
  {
   "name": "Ahmedabad",
-  "lon": 72.58727,
-  "lat": 23.02579,
+  "lon": 72.6167,
+  "lat": 23.0333,
   "country": "India"
  },
  {
   "name": "Aleppo",
-  "lon": 37.16117,
-  "lat": 36.20124,
+  "lon": 37.5,
+  "lat": 36.25,
   "country": "Syria"
  },
  {
   "name": "Alexandria",
-  "lon": 29.91582,
-  "lat": 31.20176,
+  "lon": 29.9553,
+  "lat":31.2156,
   "country": "Egypt"
  },
  {
   "name": "Algiers",
-  "lon": 3.08746,
-  "lat": 36.73225,
+  "lon": 3.042,
+  "lat": 36.7525,
   "country": "Algeria"
  },
  {
   "name": "Almaty",
-  "lon": 76.92861,
-  "lat": 43.25667,
+  "lon": 76.95,
+  "lat": 43.25,
   "country": "Kazakhstan"
  },
  {
@@ -337,8 +337,8 @@
  },
  {
   "name": "Brussels",
-  "lon": 4.34878,
-  "lat": 50.85045,
+  "lon": 4.347,
+  "lat": 50.8534,
   "country": "Belgium"
  },
  {
@@ -814,12 +814,6 @@
   "lon": 78.45636,
   "lat": 17.38405,
   "country": "India"
- },
- {
-  "name": "Hyderabad",
-  "lon": 68.37366,
-  "lat": 25.39242,
-  "country": "Pakistan"
  },
  {
   "name": "Ibadan",
