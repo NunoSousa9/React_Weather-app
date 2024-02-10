@@ -3,20 +3,35 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { fetchCityData } from "../API/GetAPI";
 import citiesData from "../API/cities_list.json";
 
+const limitDecimalPlaces = (value, decimalPlaces) => {
+    const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
+    const match = value.toString().match(pattern);
+    return match ? parseFloat(match[0]) : value;
+};
+
 const WorldMap = () => {
     const [weatherData, setWeatherData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const weatherPromises = citiesData.map(city => fetchCityData(roundCoord(city.lat), roundCoord(city.lon)));
+                const weatherPromises = citiesData.map(city => fetchCityData(limitDecimalPlaces(city.lat, 2), limitDecimalPlaces(city.lon, 2)));
                 const weatherResults = await Promise.all(weatherPromises);
-                const data = {};
+                const data = [{}];
                 weatherResults.forEach((result, index) => {
-                    const cityName = citiesData[index].name;
-                    data[cityName] = result;
+                    const city = citiesData[index];
+                    console.error(`City data not found for index ${[limitDecimalPlaces(city.lat, 2), limitDecimalPlaces(city.lon, 2)]}`);
+                    
+
+                    const matchingCity = result.coord.lat === limitDecimalPlaces(city.lat, 2) && result.coord.lon === limitDecimalPlaces(city.lon, 2);
+                    if (matchingCity) {
+                        const cityName = city.name;
+                        data[cityName] = result;
+                        console.error(result);
+                    }
                 });
                 setWeatherData(data); 
+                console.log('Weather data:', data);
             } catch (error) {
                 console.error('Error fetching weather data:', error);
             }
@@ -24,10 +39,6 @@ const WorldMap = () => {
 
         fetchData();
     }, []);
-
-    const roundCoord = (value) => {
-        return Math.round(value * 100) / 100;
-    }
 
 
     return (
@@ -37,8 +48,8 @@ const WorldMap = () => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
             {citiesData.map((city) => {
-                const roundedLat = roundCoord(city.lat);
-                const roundedLon = roundCoord(city.lon);
+                const roundedLat = limitDecimalPlaces(city.lat, 2);
+                const roundedLon = limitDecimalPlaces(city.lon, 2);
                 const roundCoords = [roundedLat, roundedLon];
                 const cityName = city.name;
                 const weather = weatherData[roundCoords];
@@ -48,7 +59,7 @@ const WorldMap = () => {
                             <h2>{cityName}</h2>
                             {weather ? (
                                 <div>
-                                    <p>Temp: </p>
+                                    <p>Temp: {weather.main.temp}°C</p>
                                     <p>Name: {weather.name}</p>
                                 </div>
                             ) : (
