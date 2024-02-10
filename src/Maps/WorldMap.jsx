@@ -39,15 +39,16 @@ const WorldMap = () => {
             {citiesData.map((city) => {
                 const roundedLat = roundCoord(city.lat);
                 const roundedLon = roundCoord(city.lon);
+                const roundCoords = [roundedLat, roundedLon];
                 const cityName = city.name;
-                const weather = weatherData[roundedLat, roundedLon];
+                const weather = weatherData[roundCoords];
                 return (
                     <Marker key={cityName} position={[roundedLat, roundedLon]}>
                         <Popup>
                             <h2>{cityName}</h2>
-                            {weatherData[roundedLat, roundedLon] ? (
+                            {weather ? (
                                 <div>
-                                    <p></p>
+                                    <p>Temp: </p>
                                     <p>Name: {weather.name}</p>
                                 </div>
                             ) : (
