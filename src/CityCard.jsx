@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { TiWeatherCloudy } from 'react-icons/ti';
 
 const CityCard = ({ selectedCity, onClose }) => {
@@ -15,4 +15,4 @@ const CityCard = ({ selectedCity, onClose }) => {
     );
 };
 
-export default CityCard;
+export default CityCard; */

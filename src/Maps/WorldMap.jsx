@@ -11,33 +11,29 @@ const limitDecimalPlaces = (value, decimalPlaces) => {
 
 const WorldMap = () => {
     const [weatherData, setWeatherData] = useState([]);
+    const [selectedCity, setSelectedCity] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchWeatherData = async () => {
             try {
-                const weatherPromises = citiesData.map(city => fetchCityData(limitDecimalPlaces(city.lat, 2), limitDecimalPlaces(city.lon, 2)));
-                const weatherResults = await Promise.all(weatherPromises);
-                const data = [{}];
-                weatherResults.forEach((result, index) => {
-                    const city = citiesData[index];
-                    console.error(`City data not found for index ${[limitDecimalPlaces(city.lat, 2), limitDecimalPlaces(city.lon, 2)]}`);
-                    
+                // Select a random city from the citiesData array
+                const randomIndex = Math.floor(Math.random() * citiesData.length);
+                const randomCity = citiesData[randomIndex];
+                setSelectedCity(randomCity);
 
-                    const matchingCity = result.coord.lat === limitDecimalPlaces(city.lat, 2) && result.coord.lon === limitDecimalPlaces(city.lon, 2);
-                    if (matchingCity) {
-                        const cityName = city.name;
-                        data[cityName] = result;
-                        console.error(result);
-                    }
-                });
-                setWeatherData(data); 
-                console.log('Weather data:', data);
+                // Fetch weather data for the selected city
+                const weatherData = await fetchCityData(
+                    limitDecimalPlaces(randomCity.lat, 2),
+                    limitDecimalPlaces(randomCity.lon, 2)
+                );
+                
+                setWeatherData(weatherData);
             } catch (error) {
                 console.error('Error fetching weather data:', error);
             }
         };
 
-        fetchData();
+        fetchWeatherData();
     }, []);
 
 
@@ -48,23 +44,16 @@ const WorldMap = () => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
             {citiesData.map((city) => {
-                const roundedLat = limitDecimalPlaces(city.lat, 2);
-                const roundedLon = limitDecimalPlaces(city.lon, 2);
-                const roundCoords = [roundedLat, roundedLon];
-                const cityName = city.name;
-                const weather = weatherData[roundCoords];
                 return (
-                    <Marker key={cityName} position={[roundedLat, roundedLon]}>
+                    <Marker key={weatherData} position={[selectedCity.lat, selectedCity.lon]}>
                         <Popup>
-                            <h2>{cityName}</h2>
-                            {weather ? (
+                            <h2>{city.name}</h2>
+                            
                                 <div>
-                                    <p>Temp: {weather.main.temp}°C</p>
-                                    <p>Name: {weather.name}</p>
+                                    <p>Temp: {weatherData.main.temp}°C</p>
+                                    <p>Name: {weatherData.name}</p>
                                 </div>
-                            ) : (
-                                <p>Loading Weather...</p>
-                            )}
+                            
                         </Popup>
                     </Marker>
                 );
