@@ -10,21 +10,20 @@ const limitDecimalPlaces = (value, decimalPlaces) => {
 };
 
 const WorldMap = () => {
-    const [weatherData, setWeatherData] = useState([]);
+    const [weatherData, setWeatherData] = useState(null);
     const [selectedCity, setSelectedCity] = useState(null);
 
     useEffect(() => {
         const fetchWeatherData = async () => {
             try {
-                // Select a random city from the citiesData array
-                const randomIndex = Math.floor(Math.random() * citiesData.length);
-                const randomCity = citiesData[randomIndex];
-                setSelectedCity(randomCity);
+                // Set selected city to Abidjan
+                const abidjan = citiesData.find(city => city.name === "Abidjan");
+                setSelectedCity(abidjan);
 
-                // Fetch weather data for the selected city
+                // Fetch weather data for Abidjan
                 const weatherData = await fetchCityData(
-                    limitDecimalPlaces(randomCity.lat, 2),
-                    limitDecimalPlaces(randomCity.lon, 2)
+                    limitDecimalPlaces(abidjan.lat, 2),
+                    limitDecimalPlaces(abidjan.lon, 2)
                 );
                 
                 setWeatherData(weatherData);
@@ -36,29 +35,29 @@ const WorldMap = () => {
         fetchWeatherData();
     }, []);
 
-
     return (
-        <MapContainer center={[0, 0]} zoom={2.5} style={{ height: '100vh', width: '100%', boxShadow: '0 0 10px rgba(200, 200, 200, 2' }}>
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            {citiesData.map((city) => {
-                return (
-                    <Marker key={weatherData} position={[selectedCity.lat, selectedCity.lon]}>
+        <div>
+            <MapContainer center={[0, 0]} zoom={2.5} style={{ height: '100vh', width: '100%', boxShadow: '0 0 10px rgba(200, 200, 200, 2' }}>
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                />
+                {selectedCity && (
+                    <Marker position={[selectedCity.lat, selectedCity.lon]}>
                         <Popup>
-                            <h2>{city.name}</h2>
-                            
+                            <h2>{selectedCity.name}</h2>
+                            {weatherData && (
                                 <div>
-                                    <p>Temp: {weatherData.main.temp}°C</p>
-                                    <p>Name: {weatherData.name}</p>
+                                    <p>Temperature: {weatherData.main.temp}</p>
+                                    <p>Weather: {weatherData.weather[0].description}</p>
                                 </div>
-                            
+                            )}
+                            <button onClick={() => setSelectedCity(null)}>Close</button>
                         </Popup>
                     </Marker>
-                );
-            })}
-        </MapContainer>
+                )}
+            </MapContainer>
+        </div>
     );
 };
 
