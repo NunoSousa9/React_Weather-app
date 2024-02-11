@@ -17,21 +17,19 @@ const WorldMap = () => {
             try {
                 const weatherPromises = citiesData.map(city => fetchCityData(limitDecimalPlaces(city.lat, 2), limitDecimalPlaces(city.lon, 2)));
                 const weatherResults = await Promise.all(weatherPromises);
-                const data = [{}];
-                weatherResults.forEach((result, index) => {
-                    const city = citiesData[index];
-                    console.error(`City data not found for index ${[limitDecimalPlaces(city.lat, 2), limitDecimalPlaces(city.lon, 2)]}`);
-                    
-
-                    const matchingCity = result.coord.lat === limitDecimalPlaces(city.lat, 2) && result.coord.lon === limitDecimalPlaces(city.lon, 2);
-                    if (matchingCity) {
+                const data = {};
+                citiesData.forEach((city, index) => {
+                    const matchingWeather = weatherResults[index];
+                    if (matchingWeather) {
                         const cityName = city.name;
-                        data[cityName] = result;
-                        console.error(result);
+                        data[cityName] = matchingWeather;
+                        console.log(`${cityName} weather:`, matchingWeather);
+                    } else {
+                        console.error(`Weather data not found for city: ${city.name}`);
                     }
                 });
-                setWeatherData(data); 
                 console.log('Weather data:', data);
+                setWeatherData(data); 
             } catch (error) {
                 console.error('Error fetching weather data:', error);
             }
@@ -50,9 +48,8 @@ const WorldMap = () => {
             {citiesData.map((city) => {
                 const roundedLat = limitDecimalPlaces(city.lat, 2);
                 const roundedLon = limitDecimalPlaces(city.lon, 2);
-                const roundCoords = [roundedLat, roundedLon];
                 const cityName = city.name;
-                const weather = weatherData[roundCoords];
+                const weather = weatherData[cityName];
                 return (
                     <Marker key={cityName} position={[roundedLat, roundedLon]}>
                         <Popup>
