@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { fetchCityData } from "../API/GetAPI";
 import citiesData from "../API/cities_list.json";
 import L from "leaflet";
+import '../App.css';
 
 const limitDecimalPlaces = (value, decimalPlaces) => {
     const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
@@ -14,6 +15,7 @@ const cityIcon = (cityName) => {
     return L.divIcon({
       className: "custom-icon",
       html: `<div>${cityName}</div>`,
+      iconSize: [100, 20],
     });
   };
 
