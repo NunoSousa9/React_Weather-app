@@ -199,8 +199,8 @@
  },
  {
   "name": "Barcelona",
-  "lon": 2.15899,
-  "lat": 41.38879,
+  "lon": 2.159,
+  "lat": 41.3888,
   "country": "Spain"
  },
  {
@@ -1381,8 +1381,8 @@
  },
  {
   "name": "Nagoya",
-  "lon": 136.90641,
-  "lat": 35.18147,
+  "lon": 136.9064,
+  "lat": 35.1815,
   "country": "Japan"
  },
  {
@@ -1573,8 +1573,8 @@
  },
  {
     "name": "Podgorzyn",
-    "lon": 15.6847,
-    "lat": 50.8274,
+    "lon": 15.6816,
+    "lat": 50.8326,
     "country": "Poland"
  },
  {
@@ -1939,8 +1939,8 @@
  },
  {
   "name": "Sofia",
-  "lon": 23.32415,
-  "lat": 42.69751,
+  "lon": 23.32,
+  "lat": 42.69,
   "country": "Bulgaria"
  },
  {
@@ -1963,152 +1963,152 @@
  },
  {
   "name": "Sucre",
-  "lon": -65.26274,
-  "lat": -19.03332,
+  "lon": -65.26,
+  "lat": -19.03,
   "country": "Bolivia"
  },
  {
   "name": "Surabaya",
-  "lon": 112.75083,
-  "lat": -7.24917,
+  "lon": 112.75,
+  "lat": -7.24,
   "country": "Indonesia"
  },
  {
   "name": "Surat",
-  "lon": 72.83023,
-  "lat": 21.19594,
+  "lon": 72.83,
+  "lat": 21.19,
   "country": "India"
  },
  {
   "name": "Suva",
-  "lon": 178.44149,
-  "lat": -18.14161,
+  "lon": 178.44,
+  "lat": -18.14,
   "country": "Fiji"
  },
  {
   "name": "Sydney",
-  "lon": 151.20732,
-  "lat": -33.86785,
+  "lon": 151.20,
+  "lat": -33.86,
   "country": "Australia"
  },
  {
   "name": "Tabriz",
-  "lon": 46.2919,
+  "lon": 46.29,
   "lat": 38.08,
   "country": "Iran"
  },
  {
   "name": "Taipei",
-  "lon": 121.53185,
-  "lat": 25.04776,
+  "lon": 121.53,
+  "lat": 25.04,
   "country": "Taiwan"
  },
  {
   "name": "Tallinn",
-  "lon": 24.75353,
-  "lat": 59.43696,
+  "lon": 24.75,
+  "lat": 59.43,
   "country": "Estonia"
  },
  {
   "name": "Tangerang",
   "lon": 106.63,
-  "lat": -6.17806,
+  "lat": -6.17,
   "country": "Indonesia"
  },
  {
   "name": "Tarawa",
-  "lon": 172.97696,
-  "lat": 1.3278,
+  "lon": 172.97,
+  "lat": 1.32,
   "country": "Kiribati"
  },
  {
   "name": "Tashkent",
-  "lon": 69.21627,
-  "lat": 41.26465,
+  "lon": 69.21,
+  "lat": 41.26,
   "country": "Uzbekistan"
  },
  {
   "name": "Tbilisi",
-  "lon": 44.83368,
-  "lat": 41.69411,
+  "lon": 44.83,
+  "lat": 41.69,
   "country": "Georgia"
  },
  {
   "name": "Tegucigalpa",
-  "lon": -87.20681,
-  "lat": 14.0818,
+  "lon": -87.20,
+  "lat": 14.08,
   "country": "Honduras"
  },
  {
   "name": "Tehran",
-  "lon": 51.42151,
-  "lat": 35.69439,
+  "lon": 51.42,
+  "lat": 35.69,
   "country": "Iran"
  },
  {
   "name": "Tel Aviv",
-  "lon": 34.78057,
-  "lat": 32.08088,
+  "lon": 34.781,
+  "lat": 32.085,
   "country": "Israel"
  },
  {
   "name": "Thimphu",
-  "lon": 89.64191,
-  "lat": 27.46609,
+  "lon": 89.64,
+  "lat": 27.46,
   "country": "Bhutan"
  },
  {
   "name": "Tianjin",
-  "lon": 117.17667,
-  "lat": 39.14222,
+  "lon": 117.17,
+  "lat": 39.14,
   "country": "China"
  },
  {
   "name": "Tijuana",
-  "lon": -117.00371,
-  "lat": 32.5027,
+  "lon": -117.00,
+  "lat": 32.50,
   "country": "Mexico"
  },
  {
   "name": "Tirana",
-  "lon": 19.81889,
-  "lat": 41.3275,
+  "lon": 19.81,
+  "lat": 41.32,
   "country": "Albania"
  },
  {
   "name": "Tokyo",
-  "lon": 139.69171,
-  "lat": 35.6895,
+  "lon": 139.69,
+  "lat": 35.68,
   "country": "Japan"
  },
  {
   "name": "Toronto",
-  "lon": -79.4163,
-  "lat": 43.70011,
+  "lon": -79.41,
+  "lat": 43.70,
   "country": "Canada"
  },
  {
   "name": "Torshavn",
-  "lon": -6.77164,
-  "lat": 62.00973,
+  "lon": -6.77,
+  "lat": 62.00,
   "country": "Faroe Islands"
  },
  {
   "name": "Tripoli",
-  "lon": 13.18733,
-  "lat": 32.88743,
+  "lon": 13.18,
+  "lat": 32.88,
   "country": "Libya"
  },
  {
   "name": "Tunis",
-  "lon": 10.16579,
-  "lat": 36.81897,
+  "lon": 10.16,
+  "lat": 36.81,
   "country": "Tunisia"
  },
  {
   "name": "Ulan Bator",
-  "lon": 106.88324,
-  "lat": 47.90771,
+  "lon": 106.88,
+  "lat": 47.90,
   "country": "Mongolia"
  },
  {
@@ -2119,38 +2119,38 @@
  },
  {
   "name": "Valencia",
-  "lon": -68.00765,
-  "lat": 10.16202,
+  "lon": -68.00,
+  "lat": 10.16,
   "country": "Venezuela"
  },
  {
   "name": "Valletta",
-  "lon": 14.5148,
-  "lat": 35.89968,
+  "lon": 14.51,
+  "lat": 35.89,
   "country": "Malta"
  },
  {
   "name": "Vancouver",
-  "lon": -123.11934,
-  "lat": 49.24966,
+  "lon": -123.11,
+  "lat": 49.24,
   "country": "Canada"
  },
  {
   "name": "Victoria",
-  "lon": 55.45501,
-  "lat": -4.62001,
+  "lon": 55.45,
+  "lat": -4.62,
   "country": "Seychelles"
  },
  {
   "name": "Vienna",
-  "lon": 16.37208,
-  "lat": 48.20849,
+  "lon": 16.37,
+  "lat": 48.20,
   "country": "Austria"
  },
  {
   "name": "Vientiane",
   "lon": 102.6,
-  "lat": 17.96667,
+  "lat": 17.96,
   "country": "Laos"
  },
  {
@@ -2197,8 +2197,8 @@
  },
  {
   "name": "Xi'an",
-  "lon": 108.92861,
-  "lat": 34.25833,
+  "lon": 108.92,
+  "lat": 34.25,
   "country": "China"
  },
  {
@@ -2220,12 +2220,6 @@
   "country": "Cameroon"
  },
  {
-  "name": "Yekaterinburg",
-  "lon": 60.6122,
-  "lat": 56.8519,
-  "country": "Russia"
- },
- {
   "name": "Yerevan",
   "lon": 44.51361,
   "lat": 40.18111,
@@ -2239,8 +2233,8 @@
  },
  {
   "name": "Zagreb",
-  "lon": 15.97798,
-  "lat": 45.81444,
+  "lon": 15.97,
+  "lat": 45.81,
   "country": "Croatia"
  }
 ]
