@@ -2,12 +2,20 @@ import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { fetchCityData } from "../API/GetAPI";
 import citiesData from "../API/cities_list.json";
+import L from "leaflet";
 
 const limitDecimalPlaces = (value, decimalPlaces) => {
     const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
     const match = value.toString().match(pattern);
     return match ? parseFloat(match[0]) : value;
 };
+
+const cityIcon = (cityName) => {
+    return L.divIcon({
+      className: "custom-icon",
+      html: `<div>${cityName}</div>`,
+    });
+  };
 
 const WorldMap = () => {
     const [weatherData, setWeatherData] = useState([]);
@@ -55,7 +63,7 @@ const WorldMap = () => {
                 const cityName = city.name;
                 const weather = weatherData[cityName];
                 return (
-                    <Marker key={cityName} position={[roundedLat, roundedLon]}>
+                    <Marker key={cityName} position={[roundedLat, roundedLon]} icon={cityIcon(cityName)}>
                         
                         <Popup>
                             <h2>{cityName}, {city.country}</h2>
