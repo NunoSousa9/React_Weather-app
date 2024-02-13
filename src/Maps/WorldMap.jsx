@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import { fetchCityData } from "../API/GetAPI";
-import citiesData from "../API/cities_list.json";
 import L from "leaflet";
 import '../App.css';
+
+
 
 const limitDecimalPlaces = (value, decimalPlaces) => {
     const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
@@ -11,61 +11,38 @@ const limitDecimalPlaces = (value, decimalPlaces) => {
     return match ? parseFloat(match[0]) : value;
 };
 
-const cityIcon = (cityName) => {
+
+const cityIcon = (cityName, temperature) => {
     return L.divIcon({
       className: "custom-icon",
-      html: `<div>${cityName}</div>`,
-      iconSize: [100, 20],
+      html: `<div>${cityName}, ${temperature !== undefined ? temperature : ''}°C</div>`,
+      iconSize: [120, 20],
     });
   };
 
-const WorldMap = () => {
-    const [weatherData, setWeatherData] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const weatherPromises = citiesData.map(city => fetchCityData(limitDecimalPlaces(city.lat, 2), limitDecimalPlaces(city.lon, 2)));
-                const weatherResults = await Promise.all(weatherPromises);
-                const data = weatherResults.reduce((acc, cityWeather, index) => {
-                    const cityName = citiesData[index].name;
-                    if (cityWeather) {
-                        acc[cityName] = cityWeather;
-                    } else {
-                        console.error(`Weather data not found for city: ${cityName}`);
-                    }
-                    return acc;
-                }, {});
-                console.log('Weather data:', data);
-                
-                setWeatherData(data); 
-            } catch (error) {
-                console.error('Error fetching weather data:', error);
-            }
-        };
-    
-        fetchData();
-    }, []);
-
-
+const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
     const kelvinToCelsius = (kelvin) => {
         return Math.round(kelvin - 273.15);
     };
 
-    
+    useEffect(() => {
+        // This effect will re-run whenever fetchCompleted changes
+        console.log("Fetch completed:", fetchCompleted);
+      }, [fetchCompleted]);
+
     return (
         <MapContainer center={[0, 0]} zoom={2.5} style={{ height: '100vh', width: '100%', boxShadow: '0 0 10px rgba(200, 200, 200, 2' }}>
             <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            {citiesData.map((city) => {
+            {fetchCompleted && citiesData.map((city) => {
                 const roundedLat = limitDecimalPlaces(city.lat, 2);
                 const roundedLon = limitDecimalPlaces(city.lon, 2);
                 const cityName = city.name;
                 const weather = weatherData[cityName];
                 return (
-                    <Marker key={cityName} position={[roundedLat, roundedLon]} icon={cityIcon(cityName)}>
+                    <Marker key={cityName} position={[roundedLat, roundedLon]} icon={cityIcon(cityName, kelvinToCelsius(weather[0]?.main?.temp))}>
                         
                         <Popup>
                             <h2>{cityName}, {city.country}</h2>
