@@ -5,7 +5,7 @@
 <br>
 <br>
 
-# React_Weather_app
+# React_Weather-app
 
 React_Weather_app is a web-based application that provides **real-time weather statistics** and comprehensive data analysis. Leveraging cutting-edge technologies, this application is built using the React framework and offers a seamless user experience with dynamic features.
 
