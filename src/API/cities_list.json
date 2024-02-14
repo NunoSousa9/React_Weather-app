@@ -168,7 +168,7 @@
   "country": "Indonesia"
  },
  {
-  "name": "Bandar Seri Begawan",
+  "name": "Brunei City",
   "lon": 114.94006,
   "lat": 4.89035,
   "country": "Brunei"
@@ -780,7 +780,7 @@
   "country": "Finland"
  },
  {
-  "name": "Ho Chi Minh City",
+  "name": "Ho Chi Minh",
   "lon": 106.62965,
   "lat": 10.82302,
   "country": "Vietnam"
@@ -1942,12 +1942,6 @@
   "lon": 23.32,
   "lat": 42.69,
   "country": "Bulgaria"
- },
- {
-  "name": "South Tangerang",
-  "lon": 106.71789,
-  "lat": -6.28862,
-  "country": "Indonesia"
  },
  {
   "name": "Soweto",

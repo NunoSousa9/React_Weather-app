@@ -3,8 +3,44 @@
 }
 
 .custom-icon {
-  padding: 5%;
-  background-color: rgb(184, 238, 247);
-  
-  border: 1px solid black;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+.custom-marker {
+  display: flex;
+  align-items: center;
+}
+
+.temperature-city-block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 5px; /* Adjust as needed */
+}
+
+.temperature {
+  background-color: #313431;
+  color: white;
+  padding: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 8px;
+  width: 17px;
+  text-align: center;
+}
+
+.city-name {
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 3px;
+}
+
+.marker-dot {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+  margin-left: 5px;
 }

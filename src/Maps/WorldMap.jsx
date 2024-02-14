@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
+import MarkerClusterGroup from "react-leaflet-markercluster";
+import "react-leaflet-markercluster/dist/styles.min.css";
 import '../App.css';
 
 const limitDecimalPlaces = (value, decimalPlaces) => {
@@ -12,18 +14,25 @@ const limitDecimalPlaces = (value, decimalPlaces) => {
 const cityIcon = (cityName, temperature) => {
     const iconColor = getIconColor(temperature);
     return L.divIcon({
-      className: "custom-icon",
-      html: `<div style="background-color: ${iconColor};">${cityName}, ${temperature !== undefined ? temperature : ''}°C</div>`,
-      iconSize: [120, 20],
+        className: "custom-icon",
+        html: `<div class="custom-marker">
+                    <div class="marker-dot"></div>
+                    <div class="temperature-city-block">
+                    <div class="temperature">${temperature !== undefined ? temperature : ''}</div>
+                    <div class="city-name" style="background-color: ${iconColor};">${cityName}</div>
+                    </div>
+                    </div>`,
+                    iconAnchor: [5, 5],
+        iconSize: [170, 40],
     });
-  };
+};
 
   const getIconColor = (temperature) => {
-    if (temperature <= 0) return '#8698f0'; // Light blue
-    else if (temperature < 10) return '#87CEEB'; // Sky blue
-    else if (temperature <= 20) return '#f0e229'; // Yellow
+    if (temperature <= 0) return '#0090f7'; // Blue
+    else if (temperature < 10) return '#87CEEB'; // Light blue
+    else if (temperature <= 20) return '#f2da4e'; // Yellow
     else if (temperature < 30) return '#edb232'; // Orange
-    else return '#FF6347'
+    else return '#FF6347' // Red
 };
 
 const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
@@ -50,8 +59,9 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
             <TileLayer
                 url="https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=a82f301e4fe13da3d06942a9363cc05b"
                 attribution='&copy; OpenWeatherMap'
+                />
                 
-            />
+            <MarkerClusterGroup>
             {fetchCompleted && citiesData.map((city) => {
                 const roundedLat = limitDecimalPlaces(city.lat, 2);
                 const roundedLon = limitDecimalPlaces(city.lon, 2);
@@ -76,6 +86,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                     </Marker>
                 );
             })}
+            </MarkerClusterGroup>
         </MapContainer>
     );
 };
