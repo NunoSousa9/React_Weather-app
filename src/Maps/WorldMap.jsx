@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import MarkerClusterGroup from "react-leaflet-markercluster";
-import "react-leaflet-markercluster/dist/styles.min.css";
 import '../App.css';
 
 const limitDecimalPlaces = (value, decimalPlaces) => {
@@ -61,7 +59,6 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                 attribution='&copy; OpenWeatherMap'
                 />
                 
-            <MarkerClusterGroup>
             {fetchCompleted && citiesData.map((city) => {
                 const roundedLat = limitDecimalPlaces(city.lat, 2);
                 const roundedLon = limitDecimalPlaces(city.lon, 2);
@@ -86,7 +83,6 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                     </Marker>
                 );
             })}
-            </MarkerClusterGroup>
         </MapContainer>
     );
 };
