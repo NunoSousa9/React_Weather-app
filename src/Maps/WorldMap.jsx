@@ -66,13 +66,11 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                 const cityName = city.name;
                 const weather = weatherData[cityName];
                 const temperature = kelvinToCelsius(weather[0]?.main?.temp);
-                // Get local time based on timezone offset
+                
                 const localTime = new Date((weather[0]?.dt + weather[0]?.timezone) * 1000);
                 const formattedTime = `${localTime.getHours()}:${String(localTime.getMinutes()).padStart(2, '0')}`;
-                const icon = <img
-                src={`http://openweathermap.org/img/wn/${weather[0]?.weather[0]?.icon}.png`}
-                alt={weather[0]?.weather[0]?.description}
-              />
+                const icon = <img src={`http://openweathermap.org/img/wn/${weather[0]?.weather[0]?.icon}.png`} alt={weather[0]?.weather[0]?.description}/>
+                
                 return (
                     <Marker key={cityName} position={[roundedLat, roundedLon]} icon={cityIcon(cityName, temperature)}>
                         <Popup>
