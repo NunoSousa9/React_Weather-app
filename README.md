@@ -23,3 +23,7 @@ React_Weather_app is a web-based application that provides **real-time weather s
 -**Real-Time City-Specific Data**: Access up-to-the-minute statistics for **weather conditions** such as **temperature**, **pressure** and **wind speed** for **+350 cities** all around the world. Dive into specific cities for detailed insights.
 
 -**Interactive Weather Map**: Explore weather conditions worldwide with an interactive map that displays current weather data for various cities and allows users to examine specific regions in detail.
+
+## How it's going... 
+
+![Alt Text](https://github.com/NunoSousa9/React_Weather-app/blob/main/assets/ScreenShot%2015-02.png)
