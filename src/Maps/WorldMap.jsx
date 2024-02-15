@@ -14,19 +14,20 @@ const cityIcon = (cityName, temperature) => {
     return L.divIcon({
         className: "custom-icon",
         html: `<div class="custom-marker">
-                    <div class="marker-dot"></div>
+                <div class="marker-dot"></div>
                     <div class="temperature-city-block">
                     <div class="temperature">${temperature !== undefined ? temperature : ''}</div>
                     <div class="city-name" style="background-color: ${iconColor};">${cityName}</div>
-                    </div>
-                    </div>`,
-                    iconAnchor: [5, 5],
+                </div>
+            </div>`,
+        iconAnchor: [5, 5],
         iconSize: [170, 40],
     });
 };
 
-  const getIconColor = (temperature) => {
-    if (temperature <= 0) return '#0090f7'; // Blue
+const getIconColor = (temperature) => {
+    if (temperature <= -15) return '#54639e'; // Purple
+    else if (temperature < 0) return '#2071d4'; // Blue
     else if (temperature < 10) return '#87CEEB'; // Light blue
     else if (temperature <= 20) return '#f2da4e'; // Yellow
     else if (temperature < 30) return '#edb232'; // Orange
@@ -44,7 +45,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
   ];
 
     useEffect(() => {
-        // This effect will re-run whenever fetchCompleted changes
+        // Re-render after fetch completed
         console.log("Fetch completed:", fetchCompleted);
       }, [fetchCompleted]);
 
@@ -53,7 +54,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
             <TileLayer
                 url="https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
                 attribution='&copy; Esri'
-            />
+            />    
             <TileLayer
                 url="https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=a82f301e4fe13da3d06942a9363cc05b"
                 attribution='&copy; OpenWeatherMap'
@@ -65,16 +66,28 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                 const cityName = city.name;
                 const weather = weatherData[cityName];
                 const temperature = kelvinToCelsius(weather[0]?.main?.temp);
+                // Get local time based on timezone offset
+                const localTime = new Date((weather[0]?.dt + weather[0]?.timezone) * 1000);
+                const formattedTime = `${localTime.getHours()}:${String(localTime.getMinutes()).padStart(2, '0')}`;
+                const icon = <img
+                src={`http://openweathermap.org/img/wn/${weather[0]?.weather[0]?.icon}.png`}
+                alt={weather[0]?.weather[0]?.description}
+              />
                 return (
                     <Marker key={cityName} position={[roundedLat, roundedLon]} icon={cityIcon(cityName, temperature)}>
-                        
                         <Popup>
-                            <h2>{cityName}, {city.country}</h2>
-                            {weather && weather[0]?.weather ? (
+                            {weather && weather[0]?.weather && citiesData ? (
                                 <div>
                                     
-                                    <p>Temp: {temperature}°C</p>
-                                    <p>Description: {weather[0]?.weather[0]?.description}</p>
+                                    <h2>{cityName}</h2>
+                                    <h5>{city.country}</h5>
+                                    <br></br>
+                                    <p>{icon}</p>
+                                    <h1>{temperature}°C</h1>
+                                    <p>{weather[0]?.weather[0]?.description}</p>
+                                    
+                                    <br></br>
+                                    <h2>{formattedTime}</h2>
                                 </div>
                             ) : (
                                 <p>Loading Weather...</p>
