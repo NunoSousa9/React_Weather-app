@@ -26,4 +26,4 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 
 ## How it's going... 
 
-![Alt Text](https://github.com/NunoSousa9/React_Weather-app/blob/main/assets/ScreenShot%2015-02.png)
+![Alt Text](https://github.com/NunoSousa9/React_Weather-app/blob/main/ScreenShot%2015-02.png)
