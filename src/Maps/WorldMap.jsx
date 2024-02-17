@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import '../App.css';
+import snowDayImage from '../assets/13n.jpg';
 
 const limitDecimalPlaces = (value, decimalPlaces) => {
     const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
@@ -33,6 +34,17 @@ const getIconColor = (temperature) => {
     else if (temperature < 30) return '#edb232'; // Orange
     else return '#FF6347' // Red
 };
+
+const popupStyle = {
+    backgroundImage: `url(${snowDayImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    width: '180px', // Adjust this value to set the width of the popup
+    height: '300px', // Adjust this value to set the height of the popup
+    padding: '20px',
+    color: 'white',
+  };
+
 
 const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
     const kelvinToCelsius = (kelvin) => {
@@ -75,8 +87,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                     <Marker key={cityName} position={[roundedLat, roundedLon]} icon={cityIcon(cityName, temperature)}>
                         <Popup>
                             {weather && weather[0]?.weather && citiesData ? (
-                                <div>
-                                    
+                                <div style={popupStyle}>
                                     <h2>{cityName}</h2>
                                     <h5>{city.country}</h5>
                                     <br></br>

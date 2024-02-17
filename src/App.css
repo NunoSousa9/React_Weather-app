@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+.custom-popup {
+  background-image: ".\assets\snow-day.jpg";
+  background-size: cover;
+  background-position: center;
+}
+
 .temperature-city-block {
   display: flex;
   flex-direction: row;
