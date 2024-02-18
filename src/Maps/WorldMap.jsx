@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import '../App.css';
-import snowDayImage from '../assets/13n.jpg';
+import getBackgroundImage from "../CityCard/Background.jsx";
+import PopupOverlay from "../CityCard/Popup.jsx";
 
 const limitDecimalPlaces = (value, decimalPlaces) => {
     const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
@@ -35,17 +36,6 @@ const getIconColor = (temperature) => {
     else return '#FF6347' // Red
 };
 
-const popupStyle = {
-    backgroundImage: `url(${snowDayImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    width: '180px', // Adjust this value to set the width of the popup
-    height: '300px', // Adjust this value to set the height of the popup
-    padding: '20px',
-    color: 'white',
-  };
-
-
 const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
     const kelvinToCelsius = (kelvin) => {
         return Math.round(kelvin - 273.15);
@@ -68,7 +58,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                 attribution='&copy; Esri'
             />    
             <TileLayer
-                url="https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=a82f301e4fe13da3d06942a9363cc05b"
+                url="https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=6a1d6fc8325594a7d0c3cd1a0660acc8"
                 attribution='&copy; OpenWeatherMap'
                 />
                 
@@ -83,19 +73,37 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                 const formattedTime = `${localTime.getHours()}:${String(localTime.getMinutes()).padStart(2, '0')}`;
                 const icon = <img src={`http://openweathermap.org/img/wn/${weather[0]?.weather[0]?.icon}.png`} alt={weather[0]?.weather[0]?.description}/>
                 
+                const weatherIcon = weather[0]?.weather[0]?.icon;
+                const backgroundImage = getBackgroundImage(weatherIcon);
+
+                const popupStyle = {
+
+                    backgroundImage: `url(${backgroundImage})`,
+                    opacity: .9,
+                    borderRadius: "10px",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    width: '100%',
+                    height: '330px',
+                    color: 'white',
+                    marginleft: '10px',
+                  }; 
+
                 return (
                     <Marker key={cityName} position={[roundedLat, roundedLon]} icon={cityIcon(cityName, temperature)}>
-                        <Popup>
+                        <Popup className="custom-popup"> 
+                            
                             {weather && weather[0]?.weather && citiesData ? (
                                 <div style={popupStyle}>
+                                   <PopupOverlay />
+                                   <br></br>
                                     <h2>{cityName}</h2>
                                     <h5>{city.country}</h5>
-                                    <br></br>
                                     <p>{icon}</p>
                                     <h1>{temperature}°C</h1>
                                     <p>{weather[0]?.weather[0]?.description}</p>
                                     
-                                    <br></br>
+                                    
                                     <h2>{formattedTime}</h2>
                                 </div>
                             ) : (

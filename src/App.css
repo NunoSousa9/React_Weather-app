@@ -13,9 +13,7 @@
 }
 
 .custom-popup {
-  background-image: ".\assets\snow-day.jpg";
-  background-size: cover;
-  background-position: center;
+  width: 250px;
 }
 
 .temperature-city-block {
