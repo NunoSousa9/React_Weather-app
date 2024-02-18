@@ -14,6 +14,18 @@
 
 .custom-popup {
   width: 250px;
+  text-indent: 20px;
+  text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+
+.capitalize-first-letter::first-letter {
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .temperature-city-block {

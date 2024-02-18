@@ -5,6 +5,9 @@ import '../App.css';
 import getBackgroundImage from "../CityCard/Background.jsx";
 import PopupOverlay from "../CityCard/Popup.jsx";
 
+
+
+
 const limitDecimalPlaces = (value, decimalPlaces) => {
     const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
     const match = value.toString().match(pattern);
@@ -86,7 +89,6 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                     width: '100%',
                     height: '330px',
                     color: 'white',
-                    marginleft: '10px',
                   }; 
 
                 return (
@@ -99,11 +101,10 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                                    <br></br>
                                     <h2>{cityName}</h2>
                                     <h5>{city.country}</h5>
-                                    <p>{icon}</p>
-                                    <h1>{temperature}°C</h1>
-                                    <p>{weather[0]?.weather[0]?.description}</p>
-                                    
-                                    
+                                    <p></p>
+                                    <h1>{temperature}°C    {icon}</h1>
+                                    <p className="capitalize-first-letter">{weather[0]?.weather[0]?.description}</p>
+                                    <br></br><br></br>
                                     <h2>{formattedTime}</h2>
                                 </div>
                             ) : (
@@ -113,6 +114,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                     </Marker>
                 );
             })}
+            
         </MapContainer>
     );
 };
