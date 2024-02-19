@@ -4,6 +4,10 @@ import React, { useState, useEffect } from "react";
 import WorldMap from "./Maps/WorldMap";
 import { fetchCityData } from "./API/GetAPI";
 import citiesData from "./API/cities_list.json";
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
+
 
 const limitDecimalPlaces = (value, decimalPlaces) => {
     const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
@@ -41,7 +45,10 @@ const App = () => {
     fetchData();
   }, []);
 
-  return <WorldMap citiesData={citiesData} weatherData={weatherData} fetchCompleted={fetchCompleted} />;
-};
+  return (
+    <QueryClientProvider client={queryClient}>
+      <WorldMap citiesData={citiesData} weatherData={weatherData} fetchCompleted={fetchCompleted} />
+    </QueryClientProvider>
+)};
 
 export default App;

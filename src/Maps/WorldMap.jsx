@@ -5,9 +5,6 @@ import '../App.css';
 import getBackgroundImage from "../CityCard/Background.jsx";
 import PopupOverlay from "../CityCard/Popup.jsx";
 
-
-
-
 const limitDecimalPlaces = (value, decimalPlaces) => {
     const pattern = new RegExp(`^-?\\d+(\\.\\d{1,${decimalPlaces}})?`);
     const match = value.toString().match(pattern);
@@ -53,6 +50,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
         // Re-render after fetch completed
         console.log("Fetch completed:", fetchCompleted);
       }, [fetchCompleted]);
+      
 
     return (
         <MapContainer center={[0, 0]} zoom={2.5} style={{ height: '100vh', width: '100%', boxShadow: '0 0 10px rgba(200, 200, 200, 2' }} maxBounds={maxBounds} maxBoundsViscosity={5.0}>
