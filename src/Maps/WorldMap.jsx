@@ -97,7 +97,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                                 <div style={popupStyle}>
                                    <PopupOverlay />
                                    <br></br>
-                                    <h2>{cityName}</h2>
+                                    <h2>{cityName},</h2>
                                     <h5>{city.country}</h5>
                                     <p></p>
                                     <h1>{temperature}°C    {icon}</h1>
