@@ -8,6 +8,8 @@
 # React_Weather-app
 
 React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap that provides **real-time weather statistics** and comprehensive data analysis. Leveraging cutting-edge technologies, this application is built using the React framework and offers a seamless user experience with dynamic features.
+<br>
+<br>
 
 ## Technologies Used
 -**React Framework**: Ensures a responsive and dynamic user interface for smooth navigation.
@@ -18,15 +20,29 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 
 -**HTML5 & CSS3**: Incorporates modern web technologies for visually appealing layouts and responsive designs.
 
--**API Fetch**: Utilizes fetch API to seamlessly retrieve data from external weather APIs, enabling real-time updates on weather conditions.
+-**API Fetch**: Utilizes fetch API to seamlessly retrieve data from external weather APIs, enabling real-time updates on weather conditions and Heat Map.
+<br>
 <br>
 
 ## Key Features
 -**Real-Time City-Specific Data**: Access up-to-the-minute statistics for **weather conditions** such as **temperature**, **pressure** and **wind speed** for **+350 cities** all around the world. Dive into specific cities for detailed insights.
 
 -**Interactive Weather Map**: Explore weather conditions worldwide with an interactive map that displays current weather data for various cities and allows users to examine specific regions in detail.
+<br>
+<br>
 
-## How it's going... 
+## Missing features
+-**Popup improvement**: Data and Styling updates for a better experience.
+
+-**Marker Cluster**: Clustering marker while zooming out to keep the app cleaner. 
+    -MarkerCluster module conflicting with markers info.
+
+-**Live Data**: Up to date deployment.
+    -Current deployment is static at the builds time.
+<br>
+<br>
+
+## So far... 
 
 -**Deployed with Vercel.com, check it yourself here:** [React_Weather-app](https://react-weather-app-eight-pied.vercel.app/)
 
@@ -34,7 +50,6 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 
 ![image](https://github.com/NunoSousa9/React_Weather-app/blob/main/ScreenShot.png?raw=true)
 
-<br>
 
 ![image](https://github.com/NunoSousa9/React_Weather-app/blob/main/ScreenShotAsia.png?raw=true)
 
