@@ -29,3 +29,12 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 ## How it's going... 
 
 -**Deployed with Vercel.com, check it yourself here:** [React_Weather-app](https://react-weather-app-eight-pied.vercel.app/)
+
+<br>
+
+![image](https://github.com/NunoSousa9/React_Weather-app/blob/main/ScreenShot.png?raw=true)
+
+<br>
+
+![image](https://github.com/NunoSousa9/React_Weather-app/blob/main/ScreenShotAsia.png?raw=true)
+
