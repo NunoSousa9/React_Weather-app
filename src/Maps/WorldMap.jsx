@@ -60,7 +60,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                 attribution='&copy; Esri'
             />    
             <TileLayer
-                url={`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=6a1d6fc8325594a7d0c3cd1a0660acc8`}
+                url={`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${process.env.REACT_APP_API_KEY_MAP}`}
                 attribution='&copy; OpenWeatherMap'
                 />
                 
