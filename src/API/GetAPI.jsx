@@ -1,9 +1,9 @@
 const fetchCityData = async (lat, lon) => {
 
   const apiKeys = [
-    process.env.REACT_APP_API_KEY_1,
-    process.env.REACT_APP_API_KEY_2,
-    process.env.REACT_APP_API_KEY_3
+    "a82f301e4fe13da3d06942a9363cc05b",
+    "20ae736fc3d76646b02e954055427f60",
+    "80cf1d0fc1b1038188b741ce2b0f4730"
   ].filter(Boolean);
 
   for (let i = 0; i < apiKeys.length; i++) {
