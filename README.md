@@ -17,6 +17,8 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 -**Leaflet.js**: Employs map rendering to allow users to explore weather conditions on an interactive global map.
 
 -**HTML5 & CSS3**: Incorporates modern web technologies for visually appealing layouts and responsive designs.
+
+-**API Fetch**: Utilizes fetch API to seamlessly retrieve data from external weather APIs, enabling real-time updates on weather conditions.
 <br>
 
 ## Key Features
