@@ -36,11 +36,11 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 
 -**Popup improvement**: Data displayed and Styling updates for a better experience.
 
--**Marker Cluster**: Clustering marker while zooming out to keep the app cleaner. 
-    -MarkerCluster module conflicting with markers info.
+-**Marker Cluster**: Clustering marker while zooming out to keep the app cleaner.<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;-MarkerCluster module conflicting with markers info.
 
--**Live Data**: Up to date deployment.
-    -Current deployment is static at the builds time.
+-**Live Data**: Up to date deployment.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-Current deployment is static at the builds time.
 <br>
 <br>
 
