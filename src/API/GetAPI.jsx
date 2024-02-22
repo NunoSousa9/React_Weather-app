@@ -19,7 +19,7 @@ const fetchCityData = async (lat, lon) => {
       const data = await response.json();
       return [data];
     } catch (error) {
-      console.error(`Error fetching city data with API key: ${i + 1} )`, error);
+      console.error(`Error fetching city data with API key: ${i + 1})`, error);
       // If the current key fails, proceed to the next one
       continue;
     }
