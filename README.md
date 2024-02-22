@@ -31,8 +31,10 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 <br>
 <br>
 
-## Missing features
--**Popup improvement**: Data and Styling updates for a better experience.
+## Missing features/Future Updates
+-**Data increment**: Add more cities to /src/API/cities_list.json to increase API fetches and app quality.
+
+-**Popup improvement**: Data displayed and Styling updates for a better experience.
 
 -**Marker Cluster**: Clustering marker while zooming out to keep the app cleaner. 
     -MarkerCluster module conflicting with markers info.
