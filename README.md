@@ -11,6 +11,12 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 <br>
 <br>
 
+## So far... 
+
+-**Deployed with Vercel.com, check it yourself here:** [React_Weather-app](https://react-weather-app-eight-pied.vercel.app/)
+<br>
+<br>
+
 ## Technologies Used
 -**React Framework**: Ensures a responsive and dynamic user interface for smooth navigation.
 
@@ -38,12 +44,9 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 
 -**Marker Cluster**: Clustering marker while zooming out to keep the app cleaner.<br> 
 &nbsp;&nbsp;&nbsp;&nbsp;-MarkerCluster module conflicting with markers info.
-<br>
-<br>
 
-## So far... 
 
--**Deployed with Vercel.com, check it yourself here:** [React_Weather-app](https://react-weather-app-eight-pied.vercel.app/)
+
 
 <br>
 
