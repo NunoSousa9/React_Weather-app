@@ -23,6 +23,19 @@
          1px  1px 0 #000;
 }
 
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.cico h2,
+.cico h5 {
+    line-height: 0.3;
+}
+
+.temp {
+  text-indent: 45px;
+  align-items: center;
+}
 
 .capitalize-first-letter::first-letter {
   text-align: right;

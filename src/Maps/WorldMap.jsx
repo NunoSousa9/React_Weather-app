@@ -96,15 +96,17 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                             
                             {weather && weather[0]?.weather && citiesData ? (
                                 <div style={popupStyle}>
-                                   <PopupOverlay />
+                                   <PopupOverlay/>
                                    <br></br>
-                                    <h2>{cityName},</h2>
-                                    <h5>{city.country}</h5>
-                                    <p></p>
-                                    <h1>{temperature}°C    {icon}</h1>
+                                    <div className="cico">
+                                        <h2>{cityName},</h2>
+                                        <h5>{city.country}</h5>
+                                    </div>
+                                    <br></br>
+                                    <h1 className="temp">{temperature}°C    {icon}</h1>
                                     <p className="capitalize-first-letter">{weather[0]?.weather[0]?.description}</p>
                                     <br></br><br></br>
-                                    <h2>{formattedTime}</h2>
+                                    <h2>{formattedTime}</h2> 
                                 </div>
                             ) : (
                                 <p>Loading Weather...</p>
