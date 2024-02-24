@@ -2230,5 +2230,236 @@
   "lon": 15.97,
   "lat": 45.81,
   "country": "Croatia"
- }
+ },
+ {
+   "name": "Faro",
+   "lon": -7.93,
+   "lat":37.01,
+   "country": "Portugal"
+
+ },
+ {
+   "name": "Valencia",
+   "lon": -0.83,
+   "lat": 39.33,
+   "country": "Spain"
+
+ },
+ {
+   "name": "Ibiza",
+   "lon": 1.43,
+   "lat": 38.90,
+   "country": "Spain"
+
+ },
+ {
+   "name": "Rennes",
+   "lon": -1.66,
+   "lat": 48.16,
+   "country": "France"
+
+ },
+ {
+   "name": "Toulouse",
+   "lon": 1.44,
+   "lat": 43.60,
+   "country": "France"
+
+ },
+ {
+   "name": "Milan",
+   "lon": 9.18,
+   "lat": 45.46,
+   "country": "Italy"
+
+ },
+ {
+   "name": "Marseille",
+   "lon": 5.5,
+   "lat": 43.33,
+   "country": "France"
+
+ },
+ {
+   "name": "Bordeaux",
+   "lon": -0.58,
+   "lat": 44.84,
+   "country": "France"
+
+ },
+ {
+   "name": "Turin",
+   "lon": 7.36,
+   "lat": 45.13,
+   "country": "Italy"
+
+ },
+ {
+   "name": "Venice",
+   "lon": 12.32,
+   "lat": 45.43,
+   "country": "Italy"
+
+ },
+ {
+   "name": "Catania",
+   "lon": 15.08,
+   "lat": 37.50,
+   "country": "Italy"
+
+ },
+ {
+   "name": "Napoli",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Bilbao",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Salzburg",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Krakow",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Cancun",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Tromso",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Atlanta",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Kansas",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Salt Lake",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Las Vegas",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": " Ontario",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Calgary",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Cardiff",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Belfast",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Glasgow",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Edimbourg",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Liverpool",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Manchester",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Boston",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Hannover",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Frankfurt",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
+ {
+   "name": "Munich",
+   "lon": ,
+   "lat": ,
+   "country": ""
+
+ },
 ]
