@@ -45,7 +45,7 @@ React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap
 -**Marker Cluster**: Clustering marker while zooming out to keep the app cleaner.<br> 
 &nbsp;&nbsp;&nbsp;&nbsp;-MarkerCluster module conflicting with markers info.
 
-
+-**Code Refactoring**: Refactor the codebase to enhance performance, readability, and maintainability while ensuring consistency and implementing best practices.
 
 
 <br>
