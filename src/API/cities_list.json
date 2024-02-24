@@ -2267,7 +2267,7 @@
 
  },
  {
-   "name": "Milan",
+   "name": "Milano",
    "lon": 9.18,
    "lat": 45.46,
    "country": "Italy"
@@ -2288,7 +2288,7 @@
 
  },
  {
-   "name": "Turin",
+   "name": "Torino",
    "lon": 7.36,
    "lat": 45.13,
    "country": "Italy"
@@ -2310,156 +2310,156 @@
  },
  {
    "name": "Napoli",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": 14.25,
+   "lat": 40.83,
+   "country": "Italy"
 
  },
  {
    "name": "Bilbao",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": -2.92,
+   "lat": 43.26,
+   "country": "Spain"
 
  },
  {
    "name": "Salzburg",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": 13.04,
+   "lat": 47.79,
+   "country": "Austria"
 
  },
  {
    "name": "Krakow",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": 19.91,
+   "lat": 50.08,
+   "country": "Poland"
 
  },
  {
    "name": "Cancun",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": -86.84,
+   "lat": 21.17,
+   "country": "Mexico"
 
  },
  {
    "name": "Tromso",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": 18.95,
+   "lat": 69.64,
+   "country": "Norway"
 
  },
  {
    "name": "Atlanta",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": -84.38,
+   "lat": 33.74,
+   "country": "United States"
 
  },
  {
    "name": "Kansas",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": -98.50,
+   "lat": 38.50,
+   "country": "United States"
 
  },
  {
    "name": "Salt Lake",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": -111.87,
+   "lat": 40.62,
+   "country": "United States"
 
  },
  {
    "name": "Las Vegas",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": -115.13,
+   "lat": 36.17,
+   "country": "United States"
 
  },
  {
    "name": " Ontario",
-   "lon": ,
-   "lat": ,
-   "country": ""
+   "lon": -117.65,
+   "lat": 34.06,
+   "country": "United States"
 
  },
  {
    "name": "Calgary",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "Canada"
 
  },
  {
    "name": "Cardiff",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "Wales"
 
  },
  {
    "name": "Belfast",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "Northern Ireland"
 
  },
  {
    "name": "Glasgow",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "Scotland"
 
  },
  {
    "name": "Edimbourg",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "Scotland"
 
  },
  {
    "name": "Liverpool",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "England"
 
  },
  {
    "name": "Manchester",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "England"
 
  },
  {
    "name": "Boston",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "United States"
 
  },
  {
    "name": "Hannover",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "Germany"
 
  },
  {
    "name": "Frankfurt",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "Germany"
 
  },
  {
    "name": "Munich",
    "lon": ,
    "lat": ,
-   "country": ""
+   "country": "Germany"
 
  },
 ]
