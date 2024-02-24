@@ -102,12 +102,6 @@
   "country": "Samoa"
  },
  {
-  "name": "Arnold",
-  "lon": -120.351935,
-  "lat": 38.255366,
-  "country": "United States"
- },
- {
   "name": "Ashgabat",
   "lon": 58.38333,
   "lat": 37.95,
@@ -978,12 +972,6 @@
   "country": "Rwanda"
  },
  {
-  "name": "Kingsburg",
-  "lon": -119.554,
-  "lat": 36.5138,
-  "country": "United States"
- },
- {
   "name": "Kingston",
   "lon": -76.79358,
   "lat": 17.99702,
@@ -1113,7 +1101,7 @@
   "name": "London",
   "lon": -0.12574,
   "lat": 51.50853,
-  "country": "United Kingdom"
+  "country": "England"
  },
  {
   "name": "Los Angeles",
@@ -1510,12 +1498,6 @@
   "lon": 104.7458,
   "lat": -2.91673,
   "country": "Indonesia"
- },
- {
-  "name": "Palo Alto",
-  "lon": -122.14302,
-  "lat": 37.44188,
-  "country": "United States"
  },
  {
   "name": "Panama",
@@ -2160,7 +2142,7 @@
   "country": "Poland"
  },
  {
-  "name": "Washington",
+  "name": "Washington DC",
   "lon": -77.03637,
   "lat": 38.89511,
   "country": "United States"
@@ -2379,9 +2361,9 @@
 
  },
  {
-   "name": " Ontario",
-   "lon": -117.65,
-   "lat": 34.06,
+   "name": " Winnipeg",
+   "lon": -97.14,
+   "lat": 49.88,
    "country": "United States"
 
  },
@@ -2460,6 +2442,48 @@
    "lon": 11.57,
    "lat": 48.13,
    "country": "Germany"
+
+ },
+ {
+   "name": "Seville",
+   "lon": -5.97,
+   "lat": 37.38,
+   "country": "Spain"
+
+ },
+ {
+   "name": "Gdansk",
+   "lon": 18.64,
+   "lat": 54.35,
+   "country": "Poland"
+
+ },
+ {
+   "name": "Adelaide",
+   "lon": 138.6,
+   "lat": -34.93,
+   "country": "Australia"
+
+ },
+ {
+   "name": "Port-aux-Français",
+   "lon": 70.2167,
+   "lat": -49.35,
+   "country": "France"
+
+ },
+ {
+   "name": "Stanley",
+   "lon": -59.16,
+   "lat": -51.75,
+   "country": "Falkland Islands"
+
+ },
+ {
+   "name": "McMurdo Station",
+   "lon": 168.22,
+   "lat": -77.65,
+   "country": "Antartic"
 
  }
 ]
