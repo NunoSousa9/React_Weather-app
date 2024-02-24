@@ -2387,79 +2387,79 @@
  },
  {
    "name": "Calgary",
-   "lon": ,
-   "lat": ,
+   "lon": -114.08,
+   "lat": 51.05,
    "country": "Canada"
 
  },
  {
    "name": "Cardiff",
-   "lon": ,
-   "lat": ,
+   "lon": -3.18,
+   "lat": 51.48,
    "country": "Wales"
 
  },
  {
    "name": "Belfast",
-   "lon": ,
-   "lat": ,
+   "lon": -5.93,
+   "lat": 54.58,
    "country": "Northern Ireland"
 
  },
  {
    "name": "Glasgow",
-   "lon": ,
-   "lat": ,
+   "lon": -4.25,
+   "lat": 55.86,
    "country": "Scotland"
 
  },
  {
-   "name": "Edimbourg",
-   "lon": ,
-   "lat": ,
+   "name": "Edinburgh",
+   "lon": -3.19,
+   "lat": 55.95,
    "country": "Scotland"
 
  },
  {
    "name": "Liverpool",
-   "lon": ,
-   "lat": ,
+   "lon": -2.97,
+   "lat": 53.41,
    "country": "England"
 
  },
  {
    "name": "Manchester",
-   "lon": ,
-   "lat": ,
+   "lon": -2.23,
+   "lat": 53.48,
    "country": "England"
 
  },
  {
    "name": "Boston",
-   "lon": ,
-   "lat": ,
+   "lon": -71.05,
+   "lat": 42.35,
    "country": "United States"
 
  },
  {
    "name": "Hannover",
-   "lon": ,
-   "lat": ,
+   "lon": 9.73,
+   "lat": 52.37,
    "country": "Germany"
 
  },
  {
    "name": "Frankfurt",
-   "lon": ,
-   "lat": ,
+   "lon": 8.68,
+   "lat": 50.11,
    "country": "Germany"
 
  },
  {
    "name": "Munich",
-   "lon": ,
-   "lat": ,
+   "lon": 11.57,
+   "lat": 48.13,
    "country": "Germany"
 
- },
+ }
 ]
