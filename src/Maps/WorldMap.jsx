@@ -103,7 +103,7 @@ const WorldMap = ({ citiesData, weatherData, fetchCompleted }) => {
                                         <h5>{city.country}</h5>
                                     </div>
                                     <br></br>
-                                    <h1 className="temp">{temperature}°C    {icon}</h1>
+                                    <h1 className="temp">{temperature}°C {icon}</h1>
                                     <p className="capitalize-first-letter">{weather[0]?.weather[0]?.description}</p>
                                     <br></br><br></br>
                                     <h2>{formattedTime}</h2> 
