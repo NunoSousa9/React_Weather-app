@@ -1,4 +1,4 @@
-## **_Work in progress, please stand by_ ... **
+## **_Work in progress... **
 
 ### ...but since you're already here, here's the project's blueprint...
 
