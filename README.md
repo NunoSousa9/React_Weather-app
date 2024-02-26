@@ -1,19 +1,12 @@
 ## **_Work in progress... **
 
-### ...but since you're already here, here's the project's blueprint...
+### ...but since you're already here...check how it's going: [React_Weather-app](https://react-weather-app-eight-pied.vercel.app/)
+<br>
 
-<br>
-<br>
 
 # React_Weather-app
 
 React_Weather_app is a web-based application, heavily inspired in OpenWeatherMap that provides **real-time weather statistics** and comprehensive data analysis. Leveraging cutting-edge technologies, this application is built using the React framework and offers a seamless user experience with dynamic features.
-<br>
-<br>
-
-## So far... 
-
--**Deployed with Vercel.com, check it yourself here:** [React_Weather-app](https://react-weather-app-eight-pied.vercel.app/)
 <br>
 <br>
 
