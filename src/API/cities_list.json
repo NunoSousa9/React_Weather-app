@@ -2258,6 +2258,17 @@
   "lon": 179.31,
   "lat": 63.05,
   "country": "Russia"
+},
+{
+  "name": "Magadan",
+  "lon": 150.8,
+  "lat": 59.56,
+  "country": "Russia"
+},
+{
+  "name": "Tiksi",
+  "lon": 128.86,
+  "lat": 71.68,
+  "country": "Russia"
 }
-
 ]
