@@ -2276,5 +2276,17 @@
   "lon": 15.64,
   "lat": 78.21,
   "country": "Norway"
+},
+{
+  "name": "Upernavik",
+  "lon": -56.15,
+  "lat": 72.78,
+  "country": "Greenland"
+},
+{
+  "name": "Detroit",
+  "lon": -83.04,
+  "lat": 42.33,
+  "country": "United States"
 }
 ]
