@@ -2270,5 +2270,11 @@
   "lon": 128.86,
   "lat": 71.68,
   "country": "Russia"
+},
+{
+  "name": "Longyearbyen",
+  "lon": 15.64,
+  "lat": 78.21,
+  "country": "Norway"
 }
 ]
