@@ -2252,6 +2252,12 @@
    "lon": 37.8,
    "lat": 48,
    "country": "Ukraine"
+ },
+{
+  "name": "Beringovkiy",
+  "lon": 179.31,
+  "lat": 63.05,
+  "country": "Russia"
+}
 
- }
 ]
