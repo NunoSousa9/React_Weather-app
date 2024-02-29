@@ -1,4 +1,4 @@
-## **_Work in progress...**
+## **Work in progress...**
 
 ### ...but since you're already here...feel free to check it out: [React_Weather-app](https://react-weather-app-eight-pied.vercel.app/)
 <br>
